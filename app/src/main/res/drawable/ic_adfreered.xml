@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector android:height="24.0dip" android:width="24.0dip" android:viewportWidth="100.0" android:viewportHeight="100.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <path android:name="Ellipse 1" android:fillColor="#ffff0000" android:pathData="m50 14.26c20.84 0 37.74 16.9 37.74 37.74c0 20.84 -16.9 37.74 -37.74 37.74c-20.84 0 -37.74 -16.9 -37.74 -37.74c0 -20.84 16.9 -37.74 37.74 -37.74zm0 -5.26c-23.75 0 -43 19.25 -43 43c0 23.75 19.25 43 43 43c23.75 0 43 -19.25 43 -43c0 -23.75 -19.25 -43 -43 -43z" />
+    <path android:name="AD" android:fillColor="#ffff0000" android:pathData="m37.44 45.43c0.62 2.53 1.24 5.6 1.87 8.01l0.43 1.75h-4.67l0.43 -1.75c0.62 -2.41 1.24 -5.45 1.79 -8.01zm21.31 0.39c3.66 0 6.53 1.24 6.53 7.16c0 5.91 -2.88 7.39 -6.53 7.39h-0.39v-14.55zm-25.28 -5.37 -7.7 25.28h6.85l1.24 -5.37h7.08l1.24 5.37h7.08l-7.7 -25.28zm18.2 0v25.28h7.86c7.31 0 12.6 -3.81 12.6 -12.76c0 -8.95 -5.29 -12.52 -12.99 -12.52z" />
+    <path android:name="Rectangle 1" android:fillColor="#ffff0000" android:pathData="m13.8 88.65 76.1 -70.33 2.04 2.2 -76.1 70.33 -2.04 -2.2z" />
+    <path android:name="Rectangle 1" android:fillColor="#ffffffff" android:pathData="m89.89 18.32 2.04 2.2 -76.1 70.33 -2.04 -2.2 76.1 -70.33zm0.04 -1.03 -0.54 0.5 -76.1 70.33 -0.54 0.5 0.5 0.54 2.04 2.2 0.5 0.54 0.54 -0.5 76.1 -70.33 0.54 -0.5 -0.5 -0.54 -2.04 -2.2 -0.5 -0.54z" />
+</vector>

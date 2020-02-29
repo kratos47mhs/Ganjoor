@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge
+  xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@id/md_content"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="4.0dip"
+        android:layout_marginBottom="20.0dip"
+        android:fontFamily="@font/iransansmobile"
+        android:textSize="@dimen/md_content_textsize" />
+    <RelativeLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <ProgressBar android:id="@android:id/progress" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal" />
+
+        <TextView
+            android:id="@id/md_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/progress"
+            android:fontFamily="@font/iransansmobile"
+            android:gravity="start"
+            android:minWidth="36.0dip"
+            android:textSize="@dimen/md_content_textsize"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@id/md_minMax"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/progress"
+            android:fontFamily="@font/iransansmobile"
+            android:gravity="end"
+            android:minWidth="48.0dip"
+            android:textSize="@dimen/md_content_textsize" />
+    </RelativeLayout>
+</merge>

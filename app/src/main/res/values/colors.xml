@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="amber">#ffffc107</color>
+    <color name="amber_dark">#ffffa000</color>
+
+    <color name="bg">#fff2f2f2</color>
+    <color name="black">#ff000000</color>
+    <color name="blue">#ff2196f3</color>
+    <color name="blue_dark">#ff1976d2</color>
+
+    <color name="cyan">#ff00bcd4</color>
+    <color name="cyan_dark">#ff0097a7</color>
+
+    <color name="design_textinput_error_color_dark">#ffff6e6e</color>
+    <color name="design_textinput_error_color_light">#ffd50000</color>
+
+    <color name="error_color_material">#fff4511e</color>
+
+    <color name="gray">#ff888888</color>
+    <color name="gray_dark">#ff555555</color>
+    <color name="green">#ff4caf50</color>
+    <color name="green_dark">#ff388e3c</color>
+
+    <color name="hint_text">#61000000</color>
+    <color name="main_color">#ff33ac71</color>
+    <color name="main_color_dark">#ff247950</color>
+    <color name="main_text">#de000000</color>
+
+    <color name="md_btn_selected">#33969696</color>
+    <color name="md_btn_selected_dark">#40cbcbcb</color>
+    <color name="md_divider_black">#10000000</color>
+    <color name="md_divider_white">#10ffffff</color>
+    <color name="md_edittext_error">#ffdd2c00</color>
+    <color name="md_material_blue_600">#ff2196f3</color>
+    <color name="md_material_blue_800">#ff1565c0</color>
+
+    <color name="notification_material_background_media_default_color">#ff424242</color>
+    <color name="orange">#ffff5722</color>
+    <color name="orange_dark">#ffe64a19</color>
+    <color name="pink">#ffe91e63</color>
+    <color name="pink_dark">#ffc2185b</color>
+
+    <color name="protector">#99ffffff</color>
+    <color name="purple">#ff9c27b0</color>
+    <color name="purple_dark">#ff7b1fa2</color>
+    <color name="red">#fff44336</color>
+    <color name="red_dark">#ffd32f2f</color>
+    <color name="ripple_dark">#1dffffff</color>
+    <color name="ripple_light">#1d000000</color>
+
+    <color name="secondary_text">#89000000</color>
+
+    <color name="splitter">#1f000000</color>
+
+    <color name="teal">#ff009688</color>
+    <color name="teal_dark">#ff00796b</color>
+
+    <color name="transparent_white">#bbffffff</color>
+    <color name="white">#ffffffff</color>
+    <color name="yellow">#fffffab4</color>
+</resources>
