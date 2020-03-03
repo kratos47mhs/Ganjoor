@@ -15,7 +15,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.MaterialDialog;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 import androidx.core.view.GravityCompat;
@@ -119,14 +119,14 @@ public class ContactActivity extends AppCompatActivity implements RecyclerFragme
 
 
     public void drawerLayout() {
-        MaterialDialog create = new MaterialDialog.Builder(this).setTitle(R.string.license).setPositiveButton(R.string.ok, null).setIcon(R.mipmap.ic_launcher).setMessage(Html.fromHtml("<div align=\"center\" style=\"\">گنجور کلام ایپ توسعه یافته توسط <strong>حیدر آرت</strong><br><br>ما را دنبال کنید<br><li><ModelViewHolder href=\"http://www.kratos47mhs.tk\">www.kratos47mhs.tk</ModelViewHolder></li><li><ModelViewHolder href=\"http://www.haideron.com\">www.haideron.com</ModelViewHolder></li></div>")).create();
+        AlertDialog create = new AlertDialog.Builder(this).setTitle(R.string.license).setPositiveButton(R.string.ok, null).setIcon(R.mipmap.ic_launcher).setMessage(Html.fromHtml("<div align=\"center\" style=\"\">گنجور کلام ایپ توسعه یافته توسط <strong>حیدر آرت</strong><br><br>ما را دنبال کنید<br><li><ModelViewHolder href=\"http://www.kratos47mhs.tk\">www.kratos47mhs.tk</ModelViewHolder></li><li><ModelViewHolder href=\"http://www.haideron.com\">www.haideron.com</ModelViewHolder></li></div>")).create();
         create.show();
         ((TextView) create.findViewById(R.id.content_holder)).setMovementMethod(LinkMovementMethod.getInstance());
     }
 
 
     public void exitStatus() {
-        MaterialDialog create = new MaterialDialog.Builder(this).setTitle(R.string.credit).setPositiveButton(R.string.ok, null).setIcon(R.mipmap.ic_launcher).setMessage(Html.fromHtml("<div align=\"center\" style=\"\">نسبت دادن<strong>گنجور ویب سایت</strong><br><br><li><ModelViewHolder href=\"http://ganjoor.net\">www.ganjoor.net</ModelViewHolder></li></div>")).create();
+        AlertDialog create = new AlertDialog.Builder(this).setTitle(R.string.credit).setPositiveButton(R.string.ok, null).setIcon(R.mipmap.ic_launcher).setMessage(Html.fromHtml("<div align=\"center\" style=\"\">نسبت دادن<strong>گنجور ویب سایت</strong><br><br><li><ModelViewHolder href=\"http://ganjoor.net\">www.ganjoor.net</ModelViewHolder></li></div>")).create();
         create.show();
         ((TextView) create.findViewById(R.id.content_holder)).setMovementMethod(LinkMovementMethod.getInstance());
     }

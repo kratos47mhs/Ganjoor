@@ -18,8 +18,6 @@ import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
-import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.MaterialDialog;
 
 import org.json.JSONArray;
 
@@ -28,6 +26,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 
 
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.google.android.material.snackbar.Snackbar;
 import com.kratos47mhs.ganjoor.App;
 import com.kratos47mhs.ganjoor.R;
@@ -97,26 +96,19 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
         if (checkForPermission) {
             checkForPermission = false;
             if (ContextCompat.checkSelfPermission(MainActivity.this, Manifest.permission.WRITE_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED) {
-                new MaterialDialog.Builder(this)
-                        .title(R.string.permission)
-                        .content(R.string.storage_permission)
-                        .positiveText(R.string.request)
-                        .negativeText(R.string.cancel)
-                        .negativeColor(ContextCompat.getColor(this, R.color.secondary_text))
-                        .onPositive(new MaterialDialog.SingleButtonCallback() {
-                            @Override
-                            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                dialog.dismiss();
-                                requestPermission();
-                            }
+                new MaterialAlertDialogBuilder(this)
+                        .setTitle(R.string.permission)
+                        .setMessage(R.string.storage_permission)
+                        .setPositiveButton(R.string.request, (dialog, which) -> {
+                            dialog.dismiss();
+                            requestPermission();
                         })
-                        .onNegative(new MaterialDialog.SingleButtonCallback() {
-                            @Override
-                            public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                dialog.dismiss();
-                                displayPermissionError();
-                            }
+                        .setNegativeButton(R.string.cancel, (dialog, which) -> {
+                            dialog.dismiss();
+                            displayPermissionError();
                         })
+                        //.negativeColor(ContextCompat.getColor(this, R.color.secondary_text))
+
                         .show();
             }
         }
@@ -201,16 +193,13 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                         public void run() {
                             switch (type) {
                                 case Drawer.TYPE_ABOUT:
-                                    new MaterialDialog.Builder(MainActivity.this)
-                                            .title(R.string.app_name)
-                                            .content(R.string.about_desc)
-                                            .positiveText(R.string.ok)
-                                            .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                                @Override
-                                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                                    dialog.dismiss();
-                                                }
+                                    new MaterialAlertDialogBuilder(MainActivity.this)
+                                            .setTitle(R.string.app_name)
+                                            .setMessage(R.string.about_desc)
+                                            .setPositiveButton(R.string.ok, (dialog, which) -> {
+                                                dialog.dismiss();
                                             })
+
                                             .show();
                                     break;
                                 case Drawer.TYPE_BACKUP:
@@ -221,15 +210,11 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                                     break;
                                 case Drawer.TYPE_SETTINGS:
                                     // TODO implement settings
-                                    new MaterialDialog.Builder(MainActivity.this)
-                                            .title(R.string.settings)
-                                            .content(R.string.not_implemented)
-                                            .positiveText(R.string.ok)
-                                            .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                                @Override
-                                                public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                                    dialog.dismiss();
-                                                }
+                                    new MaterialAlertDialogBuilder(MainActivity.this)
+                                            .setTitle(R.string.settings)
+                                            .setMessage(R.string.not_implemented)
+                                            .setPositiveButton(R.string.ok, (dialog, which) -> {
+                                                dialog.dismiss();
                                             })
                                             .show();
                                     break;
@@ -289,16 +274,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            new MaterialDialog.Builder(MainActivity.this)
-                                                    .title(R.string.restore_error)
-                                                    .positiveText(R.string.ok)
-                                                    .content(e.getMessage())
-                                                    .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                                        @Override
-                                                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                                            dialog.dismiss();
-                                                        }
+                                            new MaterialAlertDialogBuilder(MainActivity.this)
+                                                    .setTitle(R.string.restore_error)
+                                                    .setPositiveButton(R.string.ok, (dialog, which) -> {
+                                                        dialog.dismiss();
                                                     })
+                                                    .setMessage(e.getMessage())
                                                     .show();
                                         }
                                     });
@@ -311,16 +292,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
 
                     @Override
                     public void onError(String msg) {
-                        new MaterialDialog.Builder(MainActivity.this)
-                                .title(R.string.restore_error)
-                                .positiveText(R.string.ok)
-                                .content(msg)
-                                .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                    @Override
-                                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                        dialog.dismiss();
-                                    }
+                        new MaterialAlertDialogBuilder(MainActivity.this)
+                                .setTitle(R.string.restore_error)
+                                .setPositiveButton(R.string.ok, (dialog, which) -> {
+                                    dialog.dismiss();
                                 })
+                                .setMessage(msg)
                                 .show();
                     }
                 }
@@ -344,16 +321,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            new MaterialDialog.Builder(MainActivity.this)
-                                                    .title(R.string.backup)
-                                                    .positiveText(R.string.ok)
-                                                    .content(getString(R.string.backup_saved, path))
-                                                    .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                                        @Override
-                                                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                                            dialog.dismiss();
-                                                        }
+                                            new MaterialAlertDialogBuilder(MainActivity.this)
+                                                    .setTitle(R.string.backup)
+                                                    .setPositiveButton(R.string.ok, (dialog, which) -> {
+                                                        dialog.dismiss();
                                                     })
+                                                    .setMessage(getString(R.string.backup_saved, path))
                                                     .show();
                                         }
                                     });
@@ -361,16 +334,12 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
                                     runOnUiThread(new Runnable() {
                                         @Override
                                         public void run() {
-                                            new MaterialDialog.Builder(MainActivity.this)
-                                                    .title(R.string.backup_error)
-                                                    .positiveText(R.string.ok)
-                                                    .content(e.getMessage())
-                                                    .onPositive(new MaterialDialog.SingleButtonCallback() {
-                                                        @Override
-                                                        public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                                                            dialog.dismiss();
-                                                        }
+                                            new MaterialAlertDialogBuilder(MainActivity.this)
+                                                    .setTitle(R.string.backup_error)
+                                                    .setPositiveButton(R.string.ok, (dialog, which) -> {
+                                                        dialog.dismiss();
                                                     })
+                                                    .setMessage(e.getMessage())
                                                     .show();
                                         }
                                     });
@@ -422,26 +391,18 @@ public class MainActivity extends AppCompatActivity implements RecyclerFragment.
     }
 
     private void displayPermissionError() {
-        new MaterialDialog.Builder(this)
-                .title(R.string.permission_error)
-                .content(R.string.permission_error_desc)
-                .negativeText(R.string.request)
-                .positiveText(R.string.continue_anyway)
-                .negativeColor(ContextCompat.getColor(this, R.color.secondary_text))
-                .onPositive(new MaterialDialog.SingleButtonCallback() {
-                    @Override
-                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                        dialog.dismiss();
-                        permissionNotGranted = false;
-                    }
+        new MaterialAlertDialogBuilder(this)
+                .setTitle(R.string.permission_error)
+                .setMessage(R.string.permission_error_desc)
+                .setNegativeButton(R.string.request, (dialog, which) -> {
+                    dialog.dismiss();
+                    requestPermission();
                 })
-                .onNegative(new MaterialDialog.SingleButtonCallback() {
-                    @Override
-                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                        dialog.dismiss();
-                        requestPermission();
-                    }
+                .setPositiveButton(R.string.continue_anyway, (dialog, which) -> {
+                    dialog.dismiss();
+                    permissionNotGranted = false;
                 })
+                //.negativeColor(ContextCompat.getColor(this, R.color.secondary_text))
                 .show();
     }
 

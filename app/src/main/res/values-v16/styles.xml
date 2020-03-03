@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="fontFamily">@fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="colorAccent">@color/main_color</item>
         <item name="colorPrimary">@color/main_color</item>
         <item name="colorPrimaryDark">@color/main_color_dark</item>
@@ -9,7 +9,7 @@
         <item name="fabColor">@drawable/fab</item>
     </style>
     <style name="AppThemeRed" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="colorAccent">@color/red</item>
         <item name="colorPrimary">@color/red</item>
         <item name="colorPrimaryDark">@color/red_dark</item>
@@ -18,6 +18,6 @@
     </style>
     <style name="TextAppearance.AppCompat.Tooltip" parent="@style/TextAppearance.AppCompat">
         <item name="android:textSize">14.0sp</item>
-        <item name="fontFamily">sans-serif</item>
+        <item name="android:fontFamily">sans-serif</item>
     </style>
 </resources>

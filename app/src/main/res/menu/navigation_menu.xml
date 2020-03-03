@@ -1,4 +1,2 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android">
-    <android.support.v7.widget.Toolbar android:id="@+id/toolbar" />
-    <fragment android:id="@+id/nav_host_fragment" />
-</LinearLayout>
+<?xml version="1.0" encoding="utf-8"?>
+<x />

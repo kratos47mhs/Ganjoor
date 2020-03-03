@@ -3,6 +3,7 @@ package com.kratos47mhs.ganjoor.activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.appcompat.app.AppCompatActivity;
@@ -42,7 +43,6 @@ public class NoteActivity extends AppCompatActivity implements NoteFragment.Call
         setTheme(Category.getStyle(data.getIntExtra(OpenHelper.COLUMN_THEME, Category.THEME_GREEN)));
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note);
-
 
 
         position = data.getIntExtra("position", 0);

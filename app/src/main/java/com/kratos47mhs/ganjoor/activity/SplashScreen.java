@@ -2,9 +2,8 @@ package com.kratos47mhs.ganjoor.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import androidx.appcompat.app.AppCompatActivity;
 
-//import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.kratos47mhs.ganjoor.R;
 

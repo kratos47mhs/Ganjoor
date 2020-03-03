@@ -1,34 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <item
-        android:id="@id/mShare"
-        android:icon="@drawable/share"
-        android:title="@string/share"
-        app:showAsAction="never" />
-    <item
-        android:id="@id/mBack"
-        android:icon="@drawable/ic_back"
-        android:title="@string/back"
-        app:showAsAction="ifRoom" />
-    <item
-        android:id="@id/otherapps"
-        android:orderInCategory="101"
-        android:title="@string/Other_Apps"
-        app:showAsAction="never" />
-    <item
-        android:id="@id/item_rate_app"
-        android:orderInCategory="101"
-        android:title="@string/rate_app"
-        app:showAsAction="never" />
-    <item
-        android:id="@id/item_submit_bug"
-        android:orderInCategory="102"
-        android:title="@string/bug"
-        app:showAsAction="never" />
-    <item
-        android:id="@id/item_license"
-        android:orderInCategory="102"
-        android:title="@string/license"
-        app:showAsAction="never" />
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:icon="@drawable/share" android:id="@id/mShare" android:title="@string/share" app:showAsAction="never" />
+    <item android:icon="@drawable/ic_back" android:id="@id/mBack" android:title="Back" app:showAsAction="always" />
+    <item android:id="@id/otherapps" android:orderInCategory="101" android:title="@string/Other_Apps" app:showAsAction="never" />
+    <item android:id="@id/item_rate_app" android:orderInCategory="101" android:title="@string/rate_app" app:showAsAction="never" />
+    <item android:id="@id/item_submit_bug" android:orderInCategory="102" android:title="@string/bug" app:showAsAction="never" />
+    <item android:id="@id/item_license" android:orderInCategory="102" android:title="@string/license" app:showAsAction="never" />
 </menu>

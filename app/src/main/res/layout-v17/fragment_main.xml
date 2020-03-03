@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+<android.support.design.widget.CoordinatorLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
   xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.appcompat.widget.RecyclerView android:id="@id/recyclerView" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
+    <android.support.v7.widget.RecyclerView android:id="@id/recyclerView" android:visibility="gone" android:scrollbars="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" />
     <LinearLayout android:gravity="center" android:layout_gravity="center" android:orientation="vertical" android:id="@id/empty" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="fill_parent" xmlns:app="http://schemas.android.com/apk/res-auto"
       xmlns:android="http://schemas.android.com/apk/res/android">
         <ImageView android:layout_width="110.0dip" android:layout_height="110.0dip" android:scaleType="center" android:contentDescription="@string/empty" app:srcCompat="@drawable/ic_empty_categories" />
         <TextView android:textSize="@dimen/medium_text" android:textColor="@color/black" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="16.0dip" android:text="@string/no_categories" />
         <TextView android:textSize="@dimen/smaller_text" android:textColor="@color/main_text" android:gravity="center" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:layout_marginTop="5.0dip" android:layout_marginRight="16.0dip" android:text="@string/no_categories_desc" android:layout_marginStart="16.0dip" android:layout_marginEnd="16.0dip" />
     </LinearLayout>
-    <com.kratos47mhs.ganjoor.widget.Fab android:layout_gravity="end|bottom|center" android:id="@id/fab" android:background="?fabColor" android:clickable="true" android:layout_width="@dimen/fab" android:layout_height="@dimen/fab" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:scaleType="center" android:contentDescription="@string/new_category" android:layout_marginEnd="16.0dip" app:layout_anchor="@id/recyclerView" app:layout_anchorGravity="end|bottom|center" app:layout_behavior="com.kratos47mhs.ganjoor.inner.FabBehavior" app:srcCompat="@drawable/fab_add_category" />
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <com.haiderart.ganjoor.widget.Fab android:layout_gravity="end|bottom|center" android:id="@id/fab" android:background="?fabColor" android:clickable="true" android:layout_width="@dimen/fab" android:layout_height="@dimen/fab" android:layout_marginRight="16.0dip" android:layout_marginBottom="16.0dip" android:scaleType="center" android:contentDescription="@string/new_category" android:layout_marginEnd="16.0dip" app:layout_anchor="@id/recyclerView" app:layout_anchorGravity="end|bottom|center" app:layout_behavior="com.haiderart.ganjoor.inner.FabBehavior" app:srcCompat="@drawable/fab_add_category" />
+</android.support.design.widget.CoordinatorLayout>

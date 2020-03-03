@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/main_color</item>
         <item name="colorPrimary">@color/main_color</item>
@@ -10,7 +10,7 @@
         <item name="fabColor">@drawable/fab</item>
     </style>
     <style name="AppThemeAmber" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/amber</item>
         <item name="colorPrimary">@color/amber</item>
@@ -19,7 +19,7 @@
         <item name="fabColor">@drawable/fab_amber</item>
     </style>
     <style name="AppThemeBlue" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/blue</item>
         <item name="colorPrimary">@color/blue</item>
@@ -28,7 +28,7 @@
         <item name="fabColor">@drawable/fab_blue</item>
     </style>
     <style name="AppThemeCyan" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/cyan</item>
         <item name="colorPrimary">@color/cyan</item>
@@ -37,7 +37,7 @@
         <item name="fabColor">@drawable/fab_cyan</item>
     </style>
     <style name="AppThemeGreen" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/green</item>
         <item name="colorPrimary">@color/green</item>
@@ -46,7 +46,7 @@
         <item name="fabColor">@drawable/fab_green</item>
     </style>
     <style name="AppThemeOrange" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/orange</item>
         <item name="colorPrimary">@color/orange</item>
@@ -55,7 +55,7 @@
         <item name="fabColor">@drawable/fab_orange</item>
     </style>
     <style name="AppThemePink" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/pink</item>
         <item name="colorPrimary">@color/pink</item>
@@ -70,10 +70,10 @@
         <item name="colorPrimaryDark">@color/purple_dark</item>
         <item name="emptyIcon">@drawable/empty_purple</item>
         <item name="fabColor">@drawable/fab_purple</item>
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="fontFamily">@raw/irsans</item>
     </style>
     <style name="AppThemeRed" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/red</item>
         <item name="colorPrimary">@color/red</item>
@@ -82,7 +82,7 @@
         <item name="fabColor">@drawable/fab_red</item>
     </style>
     <style name="AppThemeTeal" parent="@style/Theme.AppCompat.Light.NoActionBar">
-        <item name="fontFamily">@res/fonts/iransansmobile</item>
+        <item name="android:fontFamily">@raw/irsans</item>
         <item name="android:layoutDirection">rtl</item>
         <item name="colorAccent">@color/teal</item>
         <item name="colorPrimary">@color/teal</item>
@@ -94,21 +94,21 @@
         <item name="android:paddingLeft">@dimen/md_button_padding_horizontal_internalexternal</item>
         <item name="android:paddingRight">@dimen/md_button_padding_horizontal_internalexternal</item>
         <item name="android:layout_width">fill_parent</item>
-        <item name="paddingStart">@dimen/md_button_padding_horizontal_internalexternal</item>
-        <item name="paddingEnd">@dimen/md_button_padding_horizontal_internalexternal</item>
+        <item name="android:paddingStart">@dimen/md_button_padding_horizontal_internalexternal</item>
+        <item name="android:paddingEnd">@dimen/md_button_padding_horizontal_internalexternal</item>
     </style>
     <style name="RtlOverlay.DialogWindowTitle.AppCompat" parent="@style/Base.DialogWindowTitle.AppCompat">
         <item name="android:textAlignment">viewStart</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.ActionBar.TitleItem" parent="@android:style/Widget">
         <item name="android:layout_gravity">start|center</item>
-        <item name="paddingEnd">8.0dip</item>
+        <item name="android:paddingEnd">8.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.DialogTitle.Icon" parent="@android:style/Widget">
         <item name="android:layout_marginEnd">8.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem" parent="@android:style/Widget">
-        <item name="paddingEnd">16.0dip</item>
+        <item name="android:paddingEnd">16.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.PopupMenuItem.InternalGroup" parent="@android:style/Widget">
         <item name="android:layout_marginStart">16.0dip</item>
@@ -118,8 +118,8 @@
         <item name="android:layout_alignParentStart">true</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.Search.DropDown" parent="@android:style/Widget">
-        <item name="paddingStart">@dimen/abc_dropdownitem_text_padding_left</item>
-        <item name="paddingEnd">4.0dip</item>
+        <item name="android:paddingStart">@dimen/abc_dropdownitem_text_padding_left</item>
+        <item name="android:paddingEnd">4.0dip</item>
     </style>
     <style name="RtlOverlay.Widget.AppCompat.Search.DropDown.Icon1" parent="@android:style/Widget">
         <item name="android:layout_alignParentStart">true</item>
@@ -138,11 +138,11 @@
         <item name="android:layout_marginStart">@dimen/abc_dropdownitem_text_padding_left</item>
     </style>
     <style name="RtlUnderlay.Widget.AppCompat.ActionButton" parent="@android:style/Widget">
-        <item name="paddingStart">12.0dip</item>
-        <item name="paddingEnd">12.0dip</item>
+        <item name="android:paddingStart">12.0dip</item>
+        <item name="android:paddingEnd">12.0dip</item>
     </style>
     <style name="RtlUnderlay.Widget.AppCompat.ActionButton.Overflow" parent="@style/Base.Widget.AppCompat.ActionButton">
-        <item name="paddingStart">@dimen/abc_action_bar_overflow_padding_start_material</item>
-        <item name="paddingEnd">@dimen/abc_action_bar_overflow_padding_end_material</item>
+        <item name="android:paddingStart">@dimen/abc_action_bar_overflow_padding_start_material</item>
+        <item name="android:paddingEnd">@dimen/abc_action_bar_overflow_padding_end_material</item>
     </style>
 </resources>

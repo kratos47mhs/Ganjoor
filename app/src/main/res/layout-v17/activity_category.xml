@@ -1,88 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent">
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@id/toolbar"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/toolbar_height"
-        android:background="?colorPrimary"
-        ads:contentInsetLeft="0.0dip"
-        ads:contentInsetStart="0.0dip">
-
-        <TextView
-            android:id="@id/title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|center"
-            android:layout_marginStart="16.0dip"
-            android:layout_marginLeft="16.0dip"
-            android:maxLines="1"
-            android:textColor="@color/white"
-            android:textSize="@dimen/large_text" />
-
-        <ImageView
-            android:id="@id/back_btn"
-            android:layout_width="@dimen/toolbar_height"
-            android:layout_height="@dimen/toolbar_height"
-            android:layout_gravity="start|center|top"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/back"
-            android:scaleType="center"
-            ads:srcCompat="@drawable/ic_back" />
-    </androidx.appcompat.widget.Toolbar>
-
-    <androidx.appcompat.widget.Toolbar
-        android:id="@id/selection_toolbar"
-        android:layout_width="fill_parent"
-        android:layout_height="@dimen/toolbar_height"
-        android:background="@color/gray_dark"
-        android:visibility="gone"
-        ads:contentInsetLeft="0.0dip"
-        ads:contentInsetStart="0.0dip">
-
-        <ImageView
-            android:id="@id/selection_delete"
-            android:layout_width="@dimen/toolbar_height"
-            android:layout_height="@dimen/toolbar_height"
-            android:layout_gravity="end|center|top"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/menu"
-            android:scaleType="center"
-            ads:srcCompat="@drawable/ic_delete" />
-
-        <TextView
-            android:id="@id/selection_counter"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="start|center"
-            android:layout_marginStart="16.0dip"
-            android:layout_marginLeft="16.0dip"
-            android:singleLine="true"
-            android:textColor="@color/white"
-            android:textSize="@dimen/large_text" />
-
-        <ImageView
-            android:id="@id/selection_back"
-            android:layout_width="@dimen/toolbar_height"
-            android:layout_height="@dimen/toolbar_height"
-            android:layout_gravity="start|center|top"
-            android:background="@drawable/ripple_circle"
-            android:clickable="true"
-            android:contentDescription="@string/menu"
-            android:scaleType="center"
-            ads:srcCompat="@drawable/ic_back" />
-    </androidx.appcompat.widget.Toolbar>
-
-    <FrameLayout
-        android:id="@id/container"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:layout_below="@id/toolbar" />
-
-
+<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_height" ads:contentInsetLeft="0.0dip" ads:contentInsetStart="0.0dip">
+        <TextView android:textSize="@dimen/large_text" android:textColor="@color/white" android:layout_gravity="start|center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:maxLines="1" android:layout_marginStart="16.0dip" />
+        <ImageView android:layout_gravity="start|center|top" android:id="@id/back_btn" android:background="@drawable/ripple_circle" android:clickable="true" android:layout_width="@dimen/toolbar_height" android:layout_height="@dimen/toolbar_height" android:scaleType="center" android:contentDescription="@string/back" ads:srcCompat="@drawable/ic_back" />
+    </android.support.v7.widget.Toolbar>
+    <android.support.v7.widget.Toolbar android:id="@id/selection_toolbar" android:background="@color/gray_dark" android:visibility="gone" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_height" ads:contentInsetLeft="0.0dip" ads:contentInsetStart="0.0dip">
+        <ImageView android:layout_gravity="end|center|top" android:id="@id/selection_delete" android:background="@drawable/ripple_circle" android:clickable="true" android:layout_width="@dimen/toolbar_height" android:layout_height="@dimen/toolbar_height" android:scaleType="center" android:contentDescription="@string/menu" ads:srcCompat="@drawable/ic_delete" />
+        <TextView android:textSize="@dimen/large_text" android:textColor="@color/white" android:layout_gravity="start|center" android:id="@id/selection_counter" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="16.0dip" android:singleLine="true" android:layout_marginStart="16.0dip" />
+        <ImageView android:layout_gravity="start|center|top" android:id="@id/selection_back" android:background="@drawable/ripple_circle" android:clickable="true" android:layout_width="@dimen/toolbar_height" android:layout_height="@dimen/toolbar_height" android:scaleType="center" android:contentDescription="@string/menu" ads:srcCompat="@drawable/ic_back" />
+    </android.support.v7.widget.Toolbar>
+    <FrameLayout android:id="@id/container" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_above="@id/adView" android:layout_below="@id/toolbar" />
+    <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adSize="SMART_BANNER" ads:adUnitId="@string/admob" />
 </RelativeLayout>

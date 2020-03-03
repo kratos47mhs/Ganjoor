@@ -8,11 +8,10 @@ import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.StringRes;
+import androidx.appcompat.app.AlertDialog;
 import androidx.core.content.ContextCompat;
 
-import com.afollestad.materialdialogs.DialogAction;
-import com.afollestad.materialdialogs.MaterialDialog;
-
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
 import com.kratos47mhs.ganjoor.R;
 import com.kratos47mhs.ganjoor.activity.CategoryActivity;
 import com.kratos47mhs.ganjoor.adapter.CategoryAdapter;
@@ -81,74 +80,67 @@ public class MainFragment extends RecyclerFragment<Category, CategoryAdapter> {
     }
 
     private void displayCategoryDialog(@StringRes int title, @StringRes int positiveText, final String categoryTitle, final long categoryId, final int position) {
-        MaterialDialog dialog = new MaterialDialog.Builder(getContext())
-                .title(title)
-                .positiveText(positiveText)
-                .negativeText(R.string.cancel)
-                .negativeColor(ContextCompat.getColor(getContext(), R.color.secondary_text))
-                .onPositive(new MaterialDialog.SingleButtonCallback() {
-                    @Override
-                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                        //noinspection ConstantConditions
-                        String inputTitle = ((EditText) dialog.getCustomView().findViewById(R.id.title_txt)).getText().toString();
-                        if (inputTitle.isEmpty()) {
-                            inputTitle = "Untitled";
-                        }
+        AlertDialog dialog = new AlertDialog.Builder(getContext())
+                .setTitle(title)
+                .setPositiveButton(positiveText, (dialog1, which) -> {
+                    //noinspection ConstantConditions
+                    String inputTitle = ((EditText) getView().findViewById(R.id.title_txt)).getText().toString();
+                    if (inputTitle.isEmpty()) {
+                        inputTitle = "Untitled";
+                    }
 
-                        final Category category = new Category();
-                        category.id = categoryId;
+                    final Category category = new Category();
+                    category.id = categoryId;
 
-                        final boolean isEditing = categoryId != DatabaseModel.NEW_MODEL_ID;
+                    final boolean isEditing = categoryId != DatabaseModel.NEW_MODEL_ID;
 
-                        if (!isEditing) {
-                            category.counter = 0;
-                            category.type = DatabaseModel.TYPE_CATEGORY;
-                            category.createdAt = System.currentTimeMillis();
-                            category.isArchived = false;
-                        }
+                    if (!isEditing) {
+                        category.counter = 0;
+                        category.type = DatabaseModel.TYPE_CATEGORY;
+                        category.createdAt = System.currentTimeMillis();
+                        category.isArchived = false;
+                    }
 
-                        category.title = inputTitle;
-                        category.theme = categoryDialogTheme;
+                    category.title = inputTitle;
+                    category.theme = categoryDialogTheme;
 
-                        new Thread() {
-                            @Override
-                            public void run() {
-                                final long id = category.save();
-                                if (id != DatabaseModel.NEW_MODEL_ID) {
-                                    getActivity().runOnUiThread(new Runnable() {
-                                        @Override
-                                        public void run() {
-                                            if (isEditing) {
-                                                Category categoryInItems = items.get(position);
-                                                categoryInItems.theme = category.theme;
-                                                categoryInItems.title = category.title;
-                                                refreshItem(position);
-                                            } else {
-                                                category.id = id;
-                                                addItem(category, position);
-                                            }
+                    new Thread() {
+                        @Override
+                        public void run() {
+                            final long id = category.save();
+                            if (id != DatabaseModel.NEW_MODEL_ID) {
+                                getActivity().runOnUiThread(new Runnable() {
+                                    @Override
+                                    public void run() {
+                                        if (isEditing) {
+                                            Category categoryInItems = items.get(position);
+                                            categoryInItems.theme = category.theme;
+                                            categoryInItems.title = category.title;
+                                            refreshItem(position);
+                                        } else {
+                                            category.id = id;
+                                            addItem(category, position);
                                         }
-                                    });
-                                }
-
-                                interrupt();
+                                    }
+                                });
                             }
-                        }.start();
 
-                    }
+                            interrupt();
+                        }
+                    }.start();
+
+
                 })
-                .onNegative(new MaterialDialog.SingleButtonCallback() {
-                    @Override
-                    public void onClick(@NonNull MaterialDialog dialog, @NonNull DialogAction which) {
-                        dialog.dismiss();
-                    }
-                })
-                .customView(R.layout.dialog_category, true)
-                .build();
+                .create();
+//                .setNegativeButton(R.string.cancel, (dialog1, which) -> {
+//                    dialog.dismiss();
+//                }
+//        );
+//        //.negativeColor(ContextCompat.getColor(getContext(), R.color.secondary_text))
 
         dialog.show();
 
-        final View view = dialog.getCustomView();
+        final View view = dialog.getCurrentFocus();
 
         //noinspection ConstantConditions
         ((EditText) view.findViewById(R.id.title_txt)).setText(categoryTitle);

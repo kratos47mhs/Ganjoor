@@ -10,19 +10,19 @@
     <style name="Base.Widget.AppCompat.RatingBar.Small" parent="@android:style/Widget.Material.RatingBar.Small" />
     <style name="Base.Widget.AppCompat.Spinner.Underlined" parent="@android:style/Widget.Material.Spinner.Underlined" />
     <style name="Base.V23.Theme.AppCompat" parent="@style/Base.V22.Theme.AppCompat">
-        <item name="actionBarItemBackground">?attr/actionBarItemBackground</item>
-        <item name="actionMenuTextAppearance">?attr/actionMenuTextAppearance</item>
-        <item name="actionMenuTextColor">?attr/actionMenuTextColor</item>
+        <item name="actionBarItemBackground">?android:actionBarItemBackground</item>
+        <item name="actionMenuTextAppearance">?android:actionMenuTextAppearance</item>
+        <item name="actionMenuTextColor">?android:actionMenuTextColor</item>
         <item name="controlBackground">@drawable/abc_control_background_material</item>
-        <item name="ratingBarStyleIndicator">?attr/ratingBarStyleIndicator</item>
-        <item name="ratingBarStyleSmall">?attr/ratingBarStyleSmall</item>
+        <item name="ratingBarStyleIndicator">?android:ratingBarStyleIndicator</item>
+        <item name="ratingBarStyleSmall">?android:ratingBarStyleSmall</item>
     </style>
     <style name="Base.V23.Theme.AppCompat.Light" parent="@style/Base.V22.Theme.AppCompat.Light">
-        <item name="actionBarItemBackground">?attr/actionBarItemBackground</item>
-        <item name="actionMenuTextAppearance">?attr/actionMenuTextAppearance</item>
-        <item name="actionMenuTextColor">?attr/actionMenuTextColor</item>
+        <item name="actionBarItemBackground">?android:actionBarItemBackground</item>
+        <item name="actionMenuTextAppearance">?android:actionMenuTextAppearance</item>
+        <item name="actionMenuTextColor">?android:actionMenuTextColor</item>
         <item name="controlBackground">@drawable/abc_control_background_material</item>
-        <item name="ratingBarStyleIndicator">?attr/ratingBarStyleIndicator</item>
-        <item name="ratingBarStyleSmall">?attr/ratingBarStyleSmall</item>
+        <item name="ratingBarStyleIndicator">?android:ratingBarStyleIndicator</item>
+        <item name="ratingBarStyleSmall">?android:ratingBarStyleSmall</item>
     </style>
 </resources>

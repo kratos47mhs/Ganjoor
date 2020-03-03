@@ -1,65 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    android:id="@id/drawer_layout"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:fitsSystemWindows="true">
-
-    <RelativeLayout
-        android:id="@id/ganjoor"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
-
-        <androidx.appcompat.widget.Toolbar
-            android:id="@id/toolbar"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/toolbar_height"
-            android:background="?colorPrimary"
-            ads:contentInsetLeft="0.0dip"
-            ads:contentInsetStart="0.0dip">
-
-            <TextView
-                android:id="@id/title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="start|center"
-                android:layout_marginStart="5.0dip"
-                android:fontFamily="@font/iransansmobile"
-                android:maxLines="1"
-                android:text="@string/app_name"
-                android:textColor="@color/white"
-                android:textSize="@dimen/large_text" />
-
-            <ImageView
-                android:layout_width="@dimen/toolbar_height"
-                android:layout_height="@dimen/toolbar_height"
-                android:layout_gravity="start|center|top"
-                android:contentDescription="@string/menu"
-                android:scaleType="center"
-                ads:srcCompat="@mipmap/ic_launcher" />
-
-            <ImageView
-                android:id="@id/nav_btn"
-                android:layout_width="@dimen/toolbar_height"
-                android:layout_height="@dimen/toolbar_height"
-                android:layout_gravity="start|center|top"
-                android:background="@drawable/ripple_circle"
-                android:clickable="true"
-                android:contentDescription="@string/menu"
-                android:focusable="true"
-                android:scaleType="center"
-                ads:srcCompat="@drawable/ic_menu_24dp" />
-        </androidx.appcompat.widget.Toolbar>
-
-        <WebView
-            android:id="@id/webView"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:layout_below="@id/toolbar" />
-
-
+<androidx.core.widget.DrawerLayout android:id="@id/drawer_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:ads="http://schemas.android.com/apk/res-auto">
+    <RelativeLayout android:id="@id/ganjoor" android:layout_width="fill_parent" android:layout_height="fill_parent">
+        <android.support.v7.widget.Toolbar android:id="@id/toolbar" android:background="?colorPrimary" android:layout_width="fill_parent" android:layout_height="@dimen/toolbar_height" ads:contentInsetLeft="0.0dip" ads:contentInsetStart="0.0dip">
+            <TextView android:textSize="@dimen/large_text" android:textColor="@color/white" android:layout_gravity="start|center" android:id="@id/title" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="5.0dip" android:text="@string/app_name" android:maxLines="1" />
+            <ImageView android:layout_gravity="start|center|top" android:layout_width="@dimen/toolbar_height" android:layout_height="@dimen/toolbar_height" android:scaleType="center" android:contentDescription="@string/menu" ads:srcCompat="@mipmap/ic_launcher" />
+            <ImageView android:layout_gravity="start|center|top" android:id="@id/nav_btn" android:background="@drawable/ripple_circle" android:clickable="true" android:layout_width="@dimen/toolbar_height" android:layout_height="@dimen/toolbar_height" android:scaleType="center" android:contentDescription="@string/menu" ads:srcCompat="@drawable/ic_menu_24dp" />
+        </android.support.v7.widget.Toolbar>
+        <WebView android:id="@id/webView" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_below="@id/toolbar" />
+        <com.google.android.gms.ads.AdView android:id="@id/adView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_alignParentBottom="true" android:layout_centerHorizontal="true" ads:adSize="SMART_BANNER" ads:adUnitId="@string/admob" />
     </RelativeLayout>
-
     <include layout="@layout/drawer" />
-</androidx.coordinatorlayout.widget.CoordinatorLayout>
+</androidx.core.widget.DrawerLayout>

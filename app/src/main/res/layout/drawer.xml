@@ -1,95 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@id/drawer_holder"
-    android:layout_width="@dimen/drawer_width"
-    android:layout_height="fill_parent"
-    android:layout_gravity="start"
-    android:background="@color/bg">
-
-    <ImageView
-        android:id="@id/image"
-        android:layout_width="fill_parent"
-        android:layout_height="110.0dip"
-        android:background="@color/red"
-        android:contentDescription="@string/menu"
-        android:paddingTop="5.0dip"
-        app:srcCompat="@mipmap/ic_launcher" />
-
-    <TextView
-        android:id="@id/app_name"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/image"
-        android:background="@color/red"
-        android:fontFamily="@font/iransansmobile"
-        android:gravity="center"
-        android:paddingLeft="16.0dip"
-        android:paddingRight="16.0dip"
-        android:paddingBottom="5.0dip"
-        android:singleLine="true"
-        android:text="@string/app_name"
-        android:textColor="@color/white"
-        android:textSize="@dimen/large_text" />
-
-    <TextView
-        android:id="@id/drawer_date"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/app_name"
-        android:background="@color/red_dark"
-        android:fontFamily="@font/iransansmobile"
-        android:gravity="start|center"
-        android:paddingLeft="16.0dip"
-        android:paddingTop="5.0dip"
-        android:paddingRight="16.0dip"
-        android:paddingBottom="5.0dip"
-        android:singleLine="true"
-        android:textColor="@color/transparent_white"
-        android:textSize="@dimen/small_text" />
-
-    <ListView
-        android:id="@id/drawer_list"
-        android:layout_width="@dimen/drawer_width"
-        android:layout_height="fill_parent"
-        android:layout_above="@id/settings_btn"
-        android:layout_below="@id/drawer_date"
-        android:choiceMode="none"
-        android:divider="@android:color/transparent"
-        android:dividerHeight="0.0dip"
-        android:scrollbars="vertical" />
-
-    <RelativeLayout
-        android:id="@id/settings_btn"
-        android:layout_width="fill_parent"
-        android:layout_height="48.0dip"
-        android:layout_alignParentBottom="true"
-        android:background="@drawable/ripple_rect"
-        android:clickable="true"
-        android:focusable="true"
-        android:visibility="invisible">
-
+<RelativeLayout android:layout_gravity="start" android:id="@id/drawer_holder" android:background="@color/bg" android:layout_width="@dimen/drawer_width" android:layout_height="fill_parent"
+  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView android:id="@id/image" android:background="@color/red" android:paddingTop="5.0dip" android:layout_width="fill_parent" android:layout_height="110.0dip" android:contentDescription="@string/menu" app:srcCompat="@mipmap/ic_launcher" />
+    <TextView android:textSize="@dimen/large_text" android:textColor="@color/white" android:gravity="center" android:id="@id/app_name" android:background="@color/red" android:paddingLeft="16.0dip" android:paddingRight="16.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/app_name" android:singleLine="true" android:layout_below="@id/image" />
+    <TextView android:textSize="@dimen/small_text" android:textColor="@color/transparent_white" android:gravity="start|center" android:id="@id/drawer_date" android:background="@color/red_dark" android:paddingLeft="16.0dip" android:paddingTop="5.0dip" android:paddingRight="16.0dip" android:paddingBottom="5.0dip" android:layout_width="fill_parent" android:layout_height="wrap_content" android:singleLine="true" android:layout_below="@id/app_name" />
+    <ListView android:id="@id/drawer_list" android:scrollbars="vertical" android:layout_width="@dimen/drawer_width" android:layout_height="fill_parent" android:divider="@android:color/transparent" android:dividerHeight="0.0dip" android:choiceMode="none" android:layout_above="@id/settings_btn" android:layout_below="@id/drawer_date" />
+    <RelativeLayout android:id="@id/settings_btn" android:background="@drawable/ripple_rect" android:visibility="invisible" android:clickable="true" android:layout_width="fill_parent" android:layout_height="48.0dip" android:layout_alignParentBottom="true">
         <include layout="@layout/splitter" />
-
-        <ImageView
-            android:layout_width="24.0dip"
-            android:layout_height="24.0dip"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="16.0dip"
-            android:contentDescription="@string/settings"
-            android:scaleType="center"
-            app:srcCompat="@drawable/ic_settings_24dp" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_centerVertical="true"
-            android:layout_marginStart="72.0dip"
-            android:fontFamily="@font/iransansmobile"
-            android:text="@string/settings"
-            android:textColor="@color/main_text"
-            android:textSize="@dimen/small_text" />
+        <ImageView android:layout_width="24.0dip" android:layout_height="24.0dip" android:layout_marginLeft="16.0dip" android:scaleType="center" android:layout_alignParentLeft="true" android:layout_centerVertical="true" android:contentDescription="@string/settings" app:srcCompat="@drawable/ic_settings_24dp" />
+        <TextView android:textSize="@dimen/small_text" android:textColor="@color/main_text" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginLeft="72.0dip" android:text="@string/settings" android:layout_alignParentLeft="true" android:layout_centerVertical="true" />
     </RelativeLayout>
 </RelativeLayout>
