@@ -5,14 +5,8 @@
     <style name="Animation.AppCompat.Dialog" parent="@style/Base.Animation.AppCompat.Dialog" />
     <style name="Animation.AppCompat.DropDownUp" parent="@style/Base.Animation.AppCompat.DropDownUp" />
     <style name="Animation.AppCompat.Tooltip" parent="@style/Base.Animation.AppCompat.Tooltip" />
-    <style name="Animation.Design.BottomSheetDialog" parent="@style/Animation.AppCompat.Dialog">
-        <item name="android:windowEnterAnimation">@anim/design_bottom_sheet_slide_in</item>
-        <item name="android:windowExitAnimation">@anim/design_bottom_sheet_slide_out</item>
-    </style>
-    <style name="AppDialogTheme" parent="@style/Theme.AppCompat.Light.Dialog">
-        <item name="android:windowNoTitle">true</item>
-        <item name="windowActionBar">false</item>
-    </style>
+
+
     <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
         <item name="colorAccent">@color/main_color</item>
         <item name="colorPrimary">@color/main_color</item>
@@ -91,18 +85,9 @@
         <item name="singleChoiceItemLayout">@layout/select_dialog_singlechoice_material</item>
     </style>
     <style name="Base.AlertDialog.AppCompat.Light" parent="@style/Base.AlertDialog.AppCompat" />
-    <style name="Base.Animation.AppCompat.Dialog" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@anim/abc_popup_enter</item>
-        <item name="android:windowExitAnimation">@anim/abc_popup_exit</item>
-    </style>
-    <style name="Base.Animation.AppCompat.DropDownUp" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@anim/abc_grow_fade_in_from_bottom</item>
-        <item name="android:windowExitAnimation">@anim/abc_shrink_fade_out_from_bottom</item>
-    </style>
-    <style name="Base.Animation.AppCompat.Tooltip" parent="@android:style/Animation">
-        <item name="android:windowEnterAnimation">@anim/tooltip_enter</item>
-        <item name="android:windowExitAnimation">@anim/tooltip_exit</item>
-    </style>
+
+
+
     <style name="Base.DialogWindowTitle.AppCompat" parent="@android:style/Widget">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Title</item>
         <item name="android:maxLines">1</item>
@@ -389,16 +374,7 @@
         <item name="colorSwitchThumbNormal">@color/switch_thumb_material_light</item>
         <item name="isLightTheme">true</item>
     </style>
-    <style name="Base.V11.Theme.AppCompat.Dialog" parent="@style/Base.V7.Theme.AppCompat.Dialog">
-        <item name="android:borderlessButtonStyle">@style/Widget.AppCompat.Button.Borderless</item>
-        <item name="android:buttonBarStyle">@style/Widget.AppCompat.ButtonBar.AlertDialog</item>
-        <item name="android:windowCloseOnTouchOutside">@bool/abc_config_closeDialogWhenTouchOutside</item>
-    </style>
-    <style name="Base.V11.Theme.AppCompat.Light.Dialog" parent="@style/Base.V7.Theme.AppCompat.Light.Dialog">
-        <item name="android:borderlessButtonStyle">@style/Widget.AppCompat.Button.Borderless</item>
-        <item name="android:buttonBarStyle">@style/Widget.AppCompat.ButtonBar.AlertDialog</item>
-        <item name="android:windowCloseOnTouchOutside">@bool/abc_config_closeDialogWhenTouchOutside</item>
-    </style>
+
     <style name="Base.V11.ThemeOverlay.AppCompat.Dialog" parent="@style/Base.V7.ThemeOverlay.AppCompat.Dialog">
         <item name="android:borderlessButtonStyle">@style/Widget.AppCompat.Button.Borderless</item>
         <item name="android:buttonBarStyle">@style/Widget.AppCompat.ButtonBar.AlertDialog</item>
@@ -1009,9 +985,7 @@
         <item name="android:scaleType">center</item>
         <item name="android:minWidth">56.0dip</item>
     </style>
-    <style name="Base.Widget.Design.AppBarLayout" parent="@android:style/Widget">
-        <item name="android:background">?colorPrimary</item>
-    </style>
+
     <style name="Base.Widget.Design.TabLayout" parent="@android:style/Widget">
         <item name="tabBackground">?selectableItemBackground</item>
         <item name="tabIndicatorColor">?colorAccent</item>
@@ -1022,59 +996,7 @@
         <item name="tabSelectedTextColor">?android:textColorPrimary</item>
         <item name="tabTextAppearance">@style/TextAppearance.Design.Tab</item>
     </style>
-    <style name="MD_ActionButton">
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:focusable">true</item>
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">@dimen/md_button_height</item>
-    </style>
-    <style name="MD_ActionButton.Text" parent="@style/MD_ActionButton">
-        <item name="android:textSize">@dimen/md_button_textsize</item>
-        <item name="android:gravity">center</item>
-        <item name="android:layout_gravity">center_vertical</item>
-        <item name="android:background">@null</item>
-        <item name="android:paddingLeft">@dimen/md_button_textpadding_horizontal</item>
-        <item name="android:paddingRight">@dimen/md_button_textpadding_horizontal</item>
-        <item name="android:minWidth">@dimen/md_button_min_width</item>
-        <item name="android:singleLine">true</item>
-    </style>
-    <style name="MD_ActionButtonStacked" parent="@style/MD_ActionButton">
-        <item name="android:paddingLeft">@dimen/md_button_padding_horizontal_internalexternal</item>
-        <item name="android:paddingRight">@dimen/md_button_padding_horizontal_internalexternal</item>
-        <item name="android:layout_width">fill_parent</item>
-    </style>
-    <style name="MD_Dark" parent="@style/Theme.AppCompat.Dialog.Alert">
-        <item name="android:windowAnimationStyle">@style/MD_WindowAnimation</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:actionModeBackground">@color/primary_material_dark</item>
-        <item name="android:actionModeCloseDrawable">@drawable/md_nav_back</item>
-        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
-        <item name="md_btn_negative_selector">@drawable/md_btn_selector_dark</item>
-        <item name="md_btn_neutral_selector">@drawable/md_btn_selector_dark</item>
-        <item name="md_btn_positive_selector">@drawable/md_btn_selector_dark</item>
-        <item name="md_btn_stacked_selector">@drawable/md_selector_dark</item>
-        <item name="md_divider">@color/md_divider_white</item>
-        <item name="md_list_selector">@drawable/md_selector_dark</item>
-    </style>
-    <style name="MD_Light" parent="@style/Theme.AppCompat.Light.Dialog.Alert">
-        <item name="android:windowAnimationStyle">@style/MD_WindowAnimation</item>
-        <item name="android:backgroundDimEnabled">true</item>
-        <item name="android:actionModeBackground">@color/primary_material_dark</item>
-        <item name="android:actionModeCloseDrawable">@drawable/md_nav_back</item>
-        <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
-        <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
-        <item name="md_btn_negative_selector">@drawable/md_btn_selector</item>
-        <item name="md_btn_neutral_selector">@drawable/md_btn_selector</item>
-        <item name="md_btn_positive_selector">@drawable/md_btn_selector</item>
-        <item name="md_btn_stacked_selector">@drawable/md_selector</item>
-        <item name="md_divider">@color/md_divider_black</item>
-        <item name="md_list_selector">@drawable/md_selector</item>
-    </style>
-    <style name="MD_WindowAnimation">
-        <item name="android:windowEnterAnimation">@anim/popup_enter</item>
-        <item name="android:windowExitAnimation">@anim/popup_exit</item>
-    </style>
+
     <style name="Platform.AppCompat" parent="@style/Platform.V14.AppCompat" />
     <style name="Platform.AppCompat.Light" parent="@style/Platform.V14.AppCompat.Light" />
     <style name="Platform.ThemeOverlay.AppCompat" parent="" />
@@ -1290,17 +1212,16 @@
         <item name="android:textSize">12.0sp</item>
         <item name="android:textColor">?android:textColorSecondary</item>
     </style>
-    <style name="TextAppearance.Compat.Notification.Info.Media" parent="@style/TextAppearance.Compat.Notification.Info" />
+
     <style name="TextAppearance.Compat.Notification.Line2" parent="@style/TextAppearance.Compat.Notification.Info" />
-    <style name="TextAppearance.Compat.Notification.Line2.Media" parent="@style/TextAppearance.Compat.Notification.Info.Media" />
-    <style name="TextAppearance.Compat.Notification.Media" parent="@style/TextAppearance.Compat.Notification" />
+
     <style name="TextAppearance.Compat.Notification.Time" parent="@style/TextAppearance.Compat.Notification">
         <item name="android:textSize">12.0sp</item>
         <item name="android:textColor">?android:textColorSecondary</item>
     </style>
-    <style name="TextAppearance.Compat.Notification.Time.Media" parent="@style/TextAppearance.Compat.Notification.Time" />
+
     <style name="TextAppearance.Compat.Notification.Title" parent="@android:style/TextAppearance.StatusBar.EventContent.Title" />
-    <style name="TextAppearance.Compat.Notification.Title.Media" parent="@style/TextAppearance.Compat.Notification.Title" />
+
     <style name="TextAppearance.Design.CollapsingToolbar.Expanded" parent="@style/TextAppearance.AppCompat.Display1">
         <item name="android:textColor">?android:textColorPrimary</item>
     </style>
@@ -1353,16 +1274,11 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="Theme.Design" parent="@style/Theme.AppCompat">
-        <item name="textColorError">@color/design_textinput_error_color_dark</item>
-    </style>
+
     <style name="Theme.Design.BottomSheetDialog" parent="@style/Theme.AppCompat.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
         <item name="android:windowAnimationStyle">@style/Animation.Design.BottomSheetDialog</item>
         <item name="bottomSheetStyle">@style/Widget.Design.BottomSheet.Modal</item>
-    </style>
-    <style name="Theme.Design.Light" parent="@style/Theme.AppCompat.Light">
-        <item name="textColorError">@color/design_textinput_error_color_light</item>
     </style>
     <style name="Theme.Design.Light.BottomSheetDialog" parent="@style/Theme.AppCompat.Light.Dialog">
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -1377,14 +1293,7 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
-    <style name="Theme.IAPTheme" parent="@android:style/Theme">
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowNoTitle">true</item>
-        <item name="android:windowIsFloating">true</item>
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowContentOverlay">@null</item>
-        <item name="android:backgroundDimEnabled">false</item>
-    </style>
+
     <style name="ThemeOverlay.AppCompat" parent="@style/Base.ThemeOverlay.AppCompat" />
     <style name="ThemeOverlay.AppCompat.ActionBar" parent="@style/Base.ThemeOverlay.AppCompat.ActionBar" />
     <style name="ThemeOverlay.AppCompat.Dark" parent="@style/Base.ThemeOverlay.AppCompat.Dark" />
@@ -1483,9 +1392,7 @@
         <item name="expandedTitleMargin">32.0dip</item>
         <item name="statusBarScrim">?colorPrimaryDark</item>
     </style>
-    <style name="Widget.Design.CoordinatorLayout" parent="@android:style/Widget">
-        <item name="statusBarBackground">?colorPrimaryDark</item>
-    </style>
+
     <style name="Widget.Design.FloatingActionButton" parent="@android:style/Widget">
         <item name="android:background">@drawable/design_fab_background</item>
         <item name="backgroundTint">?colorAccent</item>
@@ -1523,52 +1430,5 @@
         <item name="errorTextAppearance">@style/TextAppearance.Design.Error</item>
         <item name="hintTextAppearance">@style/TextAppearance.Design.Hint</item>
         <item name="passwordToggleDrawable">@drawable/design_ic_visibility</item>
-        <item name="passwordToggleTint">@color/design_tint_password_toggle</item>
-    </style>
-    <style name="Widget.MaterialProgressBar.ProgressBar" parent="@android:style/Widget.ProgressBar">
-        <item name="android:maxWidth">48.0dip</item>
-        <item name="android:maxHeight">48.0dip</item>
-        <item name="android:indeterminateDrawable">@null</item>
-        <item name="android:minWidth">48.0dip</item>
-        <item name="android:minHeight">48.0dip</item>
-    </style>
-    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal" parent="@android:style/Widget.ProgressBar.Horizontal">
-        <item name="android:maxHeight">16.0dip</item>
-        <item name="android:indeterminateDrawable">@null</item>
-        <item name="android:minHeight">16.0dip</item>
-    </style>
-    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal.NoPadding" parent="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal">
-        <item name="android:maxHeight">3.1999817dip</item>
-        <item name="android:minHeight">3.1999817dip</item>
-    </style>
-    <style name="Widget.MaterialProgressBar.ProgressBar.Large" parent="@style/Widget.MaterialProgressBar.ProgressBar">
-        <item name="android:maxWidth">76.0dip</item>
-        <item name="android:maxHeight">76.0dip</item>
-        <item name="android:minWidth">76.0dip</item>
-        <item name="android:minHeight">76.0dip</item>
-    </style>
-    <style name="Widget.MaterialProgressBar.ProgressBar.Large.NoPadding" parent="@style/Widget.MaterialProgressBar.ProgressBar.Large">
-        <item name="android:maxWidth">66.5dip</item>
-        <item name="android:maxHeight">66.5dip</item>
-        <item name="android:minWidth">66.5dip</item>
-        <item name="android:minHeight">66.5dip</item>
-    </style>
-    <style name="Widget.MaterialProgressBar.ProgressBar.NoPadding" parent="@style/Widget.MaterialProgressBar.ProgressBar">
-        <item name="android:maxWidth">42.0dip</item>
-        <item name="android:maxHeight">42.0dip</item>
-        <item name="android:minWidth">42.0dip</item>
-        <item name="android:minHeight">42.0dip</item>
-    </style>
-    <style name="Widget.MaterialProgressBar.ProgressBar.Small" parent="@style/Widget.MaterialProgressBar.ProgressBar">
-        <item name="android:maxWidth">16.0dip</item>
-        <item name="android:maxHeight">16.0dip</item>
-        <item name="android:minWidth">16.0dip</item>
-        <item name="android:minHeight">16.0dip</item>
-    </style>
-    <style name="Widget.MaterialProgressBar.ProgressBar.Small.NoPadding" parent="@style/Widget.MaterialProgressBar.ProgressBar.Small">
-        <item name="android:maxWidth">14.0dip</item>
-        <item name="android:maxHeight">14.0dip</item>
-        <item name="android:minWidth">14.0dip</item>
-        <item name="android:minHeight">14.0dip</item>
     </style>
 </resources>

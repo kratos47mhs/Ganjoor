@@ -1,7 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android">
-    <ImageView android:id="@id/imageView" android:layout_width="120.0sp" android:layout_height="120.0sp" android:layout_marginTop="153.0dip" android:src="@drawable/logo" android:layout_alignParentTop="true" android:layout_centerHorizontal="true" />
-    <TextView android:textSize="18.0sp" android:id="@id/textView" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="18.0dip" android:text="Persian Poetry Hub" android:layout_below="@id/imageView" android:layout_centerHorizontal="true" android:textAlignment="center" />
-    <TextView android:textSize="18.0sp" android:id="@id/textView2" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginTop="27.0dip" android:text="آثار سخنسرایان پارسی‌گو" android:layout_below="@id/textView" android:layout_centerHorizontal="true" android:textAlignment="center" />
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <ImageView
+        android:id="@id/imageView"
+        android:layout_width="120.0sp"
+        android:layout_height="120.0sp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="153.0dip"
+        android:contentDescription="@string/todo"
+        android:src="@drawable/logo" />
+
+    <TextView
+        android:id="@id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18.0dip"
+        android:text="@string/persian_poetry_hub"
+        android:textAlignment="center"
+        android:textSize="18.0sp" />
+
+    <TextView
+        android:id="@id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="27.0dip"
+        android:text="@string/description"
+        android:textAlignment="center"
+        android:textSize="18.0sp" />
 </RelativeLayout>
